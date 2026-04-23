@@ -11,7 +11,7 @@ from .models import Blog
 from .serializers import UserRegisterationSerilizer, BlogSerializer, UserUpdateSerilizer
 
 class BlogListPagination(PageNumberPagination):
-    page_size = 4
+    page_size = 1
 
 # Create your views here.
 @api_view(['POST'])
