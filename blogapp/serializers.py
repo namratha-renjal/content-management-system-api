@@ -9,7 +9,7 @@ class UserRegisterationSerilizer(serializers.ModelSerializer):
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
-        email = validated_data["email"]
+        #email = validated_data["email"]
         username = validated_data["username"]
         first_name = validated_data["first_name"]
         last_name = validated_data["last_name"]
@@ -17,7 +17,7 @@ class UserRegisterationSerilizer(serializers.ModelSerializer):
 
         user = get_user_model()
         new_user = user.objects.create_user(
-            email=email,
+            #email=email,
             username=username,
             first_name=first_name,
             last_name=last_name
